@@ -28,7 +28,7 @@ Missile Defense will have:
 + Get defensive missiles shooting and get started on writing logic for randomized-angle incoming cannon/missiles.
 
 **Day 3:**
-+ Wrap up code for incoming missiles, start on score keeping and lives remaining logic. Start Game logic.
++ Wrap up code for incoming missiles, start on score keeping and lives remaining logic. Write collision logic that will take out any incoming missiles that hit a defensive missile. Write code for missile barrage effect that will clear the screen when invoked. Start Game logic.
 
 **Day 4:**
 + Finish Game logic. Optimize any graphics issues and fix any bugs. Style the game with CSS and make it look pretty.
