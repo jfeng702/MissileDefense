@@ -1,15 +1,15 @@
 html {
-  background: url(images/bg.jpg) 
+  background: url(images/bg.jpg)
 }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Lora', serif;
 }
 canvas {
   /* background: #eee; */
   display: block;
   margin: 0 auto;
   background-image:url('./images/bg.jpg');
-
 }
