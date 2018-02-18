@@ -15,7 +15,19 @@ Missile Defense is a game modeled after missile command, an Atari game. Defend y
 + Score counter based upon time spend in game.
 + Techno music soundtrack
 
+## Challenges
 
+One of the challenges I faced was determining how to determine a collision between an incoming missile and a defensive missile (an expanding circle). This was done by comparing the radius of the circle with the distance between the latest point of the incoming missile and the center of the circle. If the radius of the circle is greater than the distance between these two points, then there will be a collision.
+```js
+isCollidedWith(missiles) {
+  missiles.forEach( missile => {
+    if ((Math.pow(this.pos['x']-missile.pos['x'], 2)
+    + Math.pow(this.pos['y'] - missile.pos['y'], 2) <= Math.pow(missile.shellRadius,2))) {
+      this.collided = true;
+    }
+  });
+}
+```
 
 
 
