@@ -17,7 +17,7 @@ Missile Defense is a game modeled after missile command, an Atari game. Defend y
 
 ## Challenges
 
-One of the challenges I faced was determining how to determine a collision between an incoming missile and a defensive missile (an expanding circle). This was done by comparing the radius of the circle with the distance between the latest point of the incoming missile and the center of the circle. If the radius of the circle is greater than the distance between these two points, then there will be a collision.
+One of the challenges I faced was determining how to determine collisions between an incoming missile and a defensive missile (an expanding circle). This was done by comparing the radius of the circle with the distance between the latest point of the incoming missile and the center of the circle. If the radius of the circle is greater than the distance between these two points, then there will be a collision.
 ```js
 isCollidedWith(missiles) {
   missiles.forEach( missile => {
@@ -29,6 +29,18 @@ isCollidedWith(missiles) {
 }
 ```
 
+Another challenge was in drawing missiles that not only expand but also decrease in size after reaching a certain point, and then disappear from the canvas. This was done by setting a maximum radius value, shellMax, and comparing this value against the sum of dr (change in radius) and shellRadius. When dr and shellRadius is greater than shellMax, the value of dr is set to negative and the circle drawn begins to decrease until the sum of shellRadius and dr become negative, at which point the shellRadius is set to 0. 
+
+```js
+if (this.shellRadius + this.dr >= this.shellMax) {
+  this.dr = -this.dr;
+}
+if (this.shellRadius + this.dr > 0) {
+  this.shellRadius += this.dr;
+} else {
+  this.shellRadius = 0;
+}
+```
 
 
 ## Technologies Used
