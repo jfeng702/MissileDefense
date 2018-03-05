@@ -33,7 +33,34 @@ isCollidedWith(missiles) {
 }
 ```
 
-Another challenge was in drawing missiles that not only expand but also decrease in size after reaching a certain point, and then disappear from the canvas. This was done by setting a maximum radius value, shellMax, and comparing this value against the sum of dr (change in radius) and shellRadius. When dr and shellRadius is greater than shellMax, the value of dr is set to negative and the circle drawn begins to decrease until the sum of shellRadius and dr become negative, at which point the shellRadius is set to 0.
+Figuring out how to render a missile that starts out as a line and then "bursts" at a fixed point was done by keeping track of where the render line currently is at (currentX, currentY), versus the destination elevation (startrockety). Once the destination elevation is reached, this.exploded becomes true, which causes the render method to call renderCircle, which begins the rendering of the shell exploding.
+
+```js
+  update() {
+    if (this.currentY > this.startrockety) {
+      this.currentX += this.xdif/40;
+      this.currentY += this.ydif/40;
+    } else {
+      this.exploded = true;
+    }
+    this.pos = {x: this.currentX, y: this.currentY};
+  }
+
+  render() {
+    // have to set a loop here somehow, otherwise it draws one point.
+    if (!this.exploded) {
+      this.ctx.beginPath();
+      this.ctx.moveTo(this.canvas.width/2, this.canvas.height);
+      this.ctx.lineTo(this.currentX, this.currentY);
+      this.ctx.strokeStyle = 'yellow';
+      this.ctx.stroke();
+      this.ctx.closePath();
+    } else {
+      this.renderCircle(this.ctx);
+    }
+  }
+```
+Another challenge was in drawing missiles that not only expand but also decrease in size after reaching a certain point, and then disappear from the canvas. This was done by setting a maximum radius value, shellMax, and comparing this value against the sum of dr (change in radius) and shellRadius. When dr and shellRadius is greater than shellMax, the value of dr is set to negative and the circle drawn begins to decrease until the sum of shellRadius and dr become negative, at which point the shellRadius is set to 0, thus disappearing from view.
 
 ```js
 if (this.shellRadius + this.dr >= this.shellMax) {
