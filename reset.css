@@ -5,7 +5,9 @@ html {
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Lora', serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Questrial', sans-serif;
+
 }
 canvas {
   /* background: #eee; */
