@@ -1,5 +1,6 @@
 html {
   background: url(images/bg.jpg)
+
 }
 
 * {
@@ -14,4 +15,22 @@ canvas {
   display: block;
   margin: 0 auto;
   background-image:url('./images/bg.jpg');
+}
+
+.fa-linkedin {
+  position: fixed;
+  right: 5vw;
+  color: black;
+}
+.fa-linkedin:hover {
+  color: white;
+}
+.fa-github-square {
+  position: fixed;
+  right: 10vw;
+  color: black;
+  /* z-index: 9; */
+}
+.fa-github-square:hover {
+  color: white;
 }
