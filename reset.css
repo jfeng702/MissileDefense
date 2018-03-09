@@ -15,6 +15,11 @@ canvas {
   display: block;
   margin: 0 auto;
   background-image:url('./images/bg.jpg');
+
+}
+
+canvas .myCanvas {
+  font-family: 'Questrial', sans-serif;
 }
 
 .fa-linkedin {
