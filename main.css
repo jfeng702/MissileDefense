@@ -1,6 +1,6 @@
 html {
-  background: url(images/bg.jpg)
-
+  background: url(images/bg.jpg);
+  font-family: 'Questrial', sans-serif;
 }
 
 * {
