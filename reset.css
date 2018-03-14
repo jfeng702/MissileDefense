@@ -6,7 +6,7 @@ html {
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Questrial', sans-serif;
+  /* font-family: 'Questrial', sans-serif; */
 
 }
 canvas {
@@ -18,23 +18,31 @@ canvas {
 }
 
 canvas .myCanvas {
-  font-family: 'Questrial', sans-serif;
+  /* font-family: 'Questrial', Helvetica, sans-serif, ; */
+  font-family: Helvetica, sans-serif, ;
+}
+
+.canvas-style {
 }
 
 .fa-linkedin {
   position: fixed;
   right: 5vw;
-  color: black;
+  bottom: 25vw;
+  color: white;
+
 }
 .fa-linkedin:hover {
-  color: white;
+  color: gray;
 }
 .fa-github-square {
   position: fixed;
-  right: 10vw;
+  right: 12vw;
+  bottom: 25vw;
   color: black;
+  color: white;
   /* z-index: 9; */
 }
 .fa-github-square:hover {
-  color: white;
+  color: gray;
 }

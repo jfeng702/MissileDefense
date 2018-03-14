@@ -2,15 +2,15 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       WebFont.load({
         google: {
           families: ['Questrial']
         }
       });
-    </script>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    </script> -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script type="application/javascript" src="lib/bundle.js"></script>
     <meta charset="utf-8">
@@ -28,15 +28,18 @@
     </audio>
 
     <!-- <a id="track" href="http://jPlayer.org/audio/mpdire3/gbreggae-leadguitar.mp3">Lead Guitar</a> -->
-    <canvas id="myCanvas" width="800" height="800"></canvas>
-
-    <footer>
+    <div class="canvas-style">
+      <canvas id="myCanvas" width="800" height="800"></canvas>
       <a href="https://github.com/jfeng702">
         <i class="fab fa-github-square fa-5x"></i>
       </a>
       <a href="https://linkedin.com/in/joeyfeng">
         <i class="fab fa-linkedin fa-5x"></i>
       </a>
+    </div>
+
+    <footer>
+
 
     </footer>
   </body>
