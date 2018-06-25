@@ -9,15 +9,17 @@ Missile Defense is a game modeled after missile command, an Atari game. Defend y
 ## Technologies Used
 + Vanilla Javascript for overall structure
 + HTML Canvas for DOM manipulation
-## Features
++ Web Audio API for sound effects
 
+## Features
 + Incoming rockets that decrement lives upon contact with the ground.
 ![Gameplay](images/gameplay.gif)
 + Mouse feedback to shoot defensive missiles which will take out incoming missiles upon collision.
 + A missile barrage ability that will wipe out incoming missiles.
 ![Missile Barrage](images/special.gif)
-+ Score counter based upon time spend in game.
++ Score counter based upon time spent in game.
 + Techno music soundtrack
++ Web Audio API sound effects. (Implemented 6/25/18)
 
 ## Challenges
 
@@ -73,8 +75,6 @@ if (this.shellRadius + this.dr > 0) {
 }
 ```
 
-
-
 **Future Improvements**
-+ Sound effects for missile launches and collisions
-+ Additional weapons/abilities
++ S̶o̶u̶n̶d̶ ̶e̶f̶f̶e̶c̶t̶s̶ ̶f̶o̶r̶ ̶m̶i̶s̶s̶i̶l̶e̶ ̶l̶a̶u̶n̶c̶h̶e̶s̶ ̶a̶n̶d̶ ̶c̶o̶l̶l̶i̶s̶i̶o̶n̶s̶
++ A̶d̶d̶i̶t̶i̶o̶n̶a̶l̶ ̶w̶e̶a̶p̶o̶n̶s̶/̶a̶b̶i̶l̶i̶t̶i̶e̶s̶
